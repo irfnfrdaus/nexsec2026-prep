@@ -5,6 +5,15 @@ official exercise format and rules are different from a standard flag-based boot
 policy applies to this repo too (study material only, pre-event — see that file for details). Then
 check `00b-pre-event-logistics-checklist.md` for what to confirm with organizers beforehand.
 
+## Don't know where to start once you're assigned a system? Start here.
+
+- **`01-DAY1-MASTER-RUNBOOK.md`** — a single linear, step-by-step sequence for the live Day 1 exercise,
+  regardless of whether you're assigned a Linux host, Windows host, or web app. Follow it top to bottom;
+  it tells you exactly which other file to open at each step.
+- **`02-DAY2-FORENSICS-RUNBOOK.md`** — the same idea for Day 2's evidence-only forensics work.
+
+Everything else in this repo is the detailed reference material those two runbooks point you to.
+
 ## Quick keyword index
 
 Use Ctrl+F / your editor's search on this table to jump to the right file fast during study, or to
@@ -14,7 +23,10 @@ remember where something lives.
 |---|---|
 | Rules, scoring, what's allowed | `00-rules-and-reminders.md` |
 | Pre-event logistics / what to confirm with organizers | `00b-pre-event-logistics-checklist.md` |
+| **Step-by-step Day 1 workflow (start here if stuck)** | `01-DAY1-MASTER-RUNBOOK.md` |
+| **Step-by-step Day 2 forensics workflow (start here if stuck)** | `02-DAY2-FORENSICS-RUNBOOK.md` |
 | One-page printable command references | `cheatsheets/linux-cheatsheet.md`, `cheatsheets/windows-cheatsheet.md`, `cheatsheets/web-cheatsheet.md` |
+| Common ports/services quick lookup during recon | `cheatsheets/common-ports-services.md` |
 | Linux: first things to check on a box | `linux/01-initial-triage.md` |
 | Linux: cron, SSH keys, SUID, systemd persistence | `linux/02-persistence-hunting.md` |
 | Linux: auth.log, syslog, journald, bash history | `linux/03-log-analysis.md` |
@@ -42,6 +54,8 @@ remember where something lives.
 | Handover notes (fill in when swapping teammates) | `templates/handover-notes-template.md` |
 | Forensic report template (Day 2 deliverable) | `templates/forensic-report-template.md` |
 | Splitting roles & workflow across your team | `templates/team-roles-workflow.md` |
+| Rating findings by severity (what to fix first) | `templates/finding-severity-rating.md` |
+| Final checklist before submitting your report | `templates/report-submission-checklist.md` |
 | Tools to install beforehand + download links | `tools/tool-list.md` |
 
 ## Suggested prep order
@@ -66,10 +80,13 @@ remember where something lives.
 .
 ├── 00-rules-and-reminders.md
 ├── 00b-pre-event-logistics-checklist.md
+├── 01-DAY1-MASTER-RUNBOOK.md
+├── 02-DAY2-FORENSICS-RUNBOOK.md
 ├── cheatsheets/
 │   ├── linux-cheatsheet.md
 │   ├── windows-cheatsheet.md
-│   └── web-cheatsheet.md
+│   ├── web-cheatsheet.md
+│   └── common-ports-services.md
 ├── linux/
 │   ├── 01-initial-triage.md
 │   ├── 02-persistence-hunting.md
@@ -102,7 +119,9 @@ remember where something lives.
 │   ├── findings-log-template.md
 │   ├── handover-notes-template.md
 │   ├── forensic-report-template.md
-│   └── team-roles-workflow.md
+│   ├── team-roles-workflow.md
+│   ├── finding-severity-rating.md
+│   └── report-submission-checklist.md
 └── tools/
     └── tool-list.md
 ```
