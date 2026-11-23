@@ -2,7 +2,8 @@
 
 Prep repo for NEXSEC2026 (MITEC, 25–26 Nov 2026). **Read `00-rules-and-reminders.md` first** — the
 official exercise format and rules are different from a standard flag-based boot2root CTF, and the AI
-policy applies to this repo too (study material only, pre-event — see that file for details).
+policy applies to this repo too (study material only, pre-event — see that file for details). Then
+check `00b-pre-event-logistics-checklist.md` for what to confirm with organizers beforehand.
 
 ## Quick keyword index
 
@@ -12,6 +13,8 @@ remember where something lives.
 | Looking for... | Go to |
 |---|---|
 | Rules, scoring, what's allowed | `00-rules-and-reminders.md` |
+| Pre-event logistics / what to confirm with organizers | `00b-pre-event-logistics-checklist.md` |
+| One-page printable command references | `cheatsheets/linux-cheatsheet.md`, `cheatsheets/windows-cheatsheet.md`, `cheatsheets/web-cheatsheet.md` |
 | Linux: first things to check on a box | `linux/01-initial-triage.md` |
 | Linux: cron, SSH keys, SUID, systemd persistence | `linux/02-persistence-hunting.md` |
 | Linux: auth.log, syslog, journald, bash history | `linux/03-log-analysis.md` |
@@ -20,6 +23,7 @@ remember where something lives.
 | Windows: Run keys, scheduled tasks, services, WMI | `windows/02-persistence-hunting.md` |
 | Windows: Event IDs, Security log, PowerShell logging | `windows/03-event-log-analysis.md` |
 | Windows: fixing what you found | `windows/04-hardening-checklist.md` |
+| Windows: domain-joined / Active Directory checks | `windows/05-active-directory-enumeration.md` |
 | Webshells / backdoors in a web app | `web/01-webshell-detection.md` |
 | Apache/Nginx/IIS access log analysis | `web/02-access-log-analysis.md` |
 | WordPress, exposed .git, default creds, file upload flaws | `web/03-common-cms-weaknesses.md` |
@@ -28,6 +32,7 @@ remember where something lives.
 | Memory forensics / Volatility | `forensics/02-memory-forensics.md` |
 | Building a timeline | `forensics/03-timeline-analysis.md` |
 | Chain of custody / how to write conclusions | `forensics/04-chain-of-custody.md` |
+| Network/PCAP analysis, C2 & exfil detection (Wireshark) | `forensics/05-network-pcap-analysis.md` |
 | Nmap, gobuster, general recon | `offensive/01-recon-enumeration.md` |
 | SQLi, LFI, file upload exploitation, command injection | `offensive/02-web-exploitation.md` |
 | Linux privilege escalation (GTFOBins, SUID, cron) | `offensive/03-linux-privesc.md` |
@@ -36,6 +41,7 @@ remember where something lives.
 | Findings log (fill in live during the exercise) | `templates/findings-log-template.md` |
 | Handover notes (fill in when swapping teammates) | `templates/handover-notes-template.md` |
 | Forensic report template (Day 2 deliverable) | `templates/forensic-report-template.md` |
+| Splitting roles & workflow across your team | `templates/team-roles-workflow.md` |
 | Tools to install beforehand + download links | `tools/tool-list.md` |
 
 ## Suggested prep order
@@ -59,6 +65,11 @@ remember where something lives.
 ```
 .
 ├── 00-rules-and-reminders.md
+├── 00b-pre-event-logistics-checklist.md
+├── cheatsheets/
+│   ├── linux-cheatsheet.md
+│   ├── windows-cheatsheet.md
+│   └── web-cheatsheet.md
 ├── linux/
 │   ├── 01-initial-triage.md
 │   ├── 02-persistence-hunting.md
@@ -68,7 +79,8 @@ remember where something lives.
 │   ├── 01-initial-triage.md
 │   ├── 02-persistence-hunting.md
 │   ├── 03-event-log-analysis.md
-│   └── 04-hardening-checklist.md
+│   ├── 04-hardening-checklist.md
+│   └── 05-active-directory-enumeration.md
 ├── web/
 │   ├── 01-webshell-detection.md
 │   ├── 02-access-log-analysis.md
@@ -78,7 +90,8 @@ remember where something lives.
 │   ├── 01-disk-imaging-triage.md
 │   ├── 02-memory-forensics.md
 │   ├── 03-timeline-analysis.md
-│   └── 04-chain-of-custody.md
+│   ├── 04-chain-of-custody.md
+│   └── 05-network-pcap-analysis.md
 ├── offensive/
 │   ├── 01-recon-enumeration.md
 │   ├── 02-web-exploitation.md
@@ -88,7 +101,8 @@ remember where something lives.
 ├── templates/
 │   ├── findings-log-template.md
 │   ├── handover-notes-template.md
-│   └── forensic-report-template.md
+│   ├── forensic-report-template.md
+│   └── team-roles-workflow.md
 └── tools/
     └── tool-list.md
 ```
